@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import AuthLayout from '../../components/layouts/AuthLayout';
 import Input from '../../components/inputs/input.jsx';
 import { Link } from 'react-router-dom';
+import { validateEmail } from '../../utils/helper.js';
 
 const Login = () => {
   const [email, setEmail] = useState('');
