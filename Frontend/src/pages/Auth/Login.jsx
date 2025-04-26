@@ -53,12 +53,12 @@ const Login = () => {
              {error && <p className="text-red-500 mt-2">{error}</p>}
 
 
-          <button type="submit" className="w-full bg-violet-500 hover:bg-violet-600 text-white font-semibold py-2 rounded mt-4">
+          <button type="submit" className="w-full bg-violet-500 hover:bg-violet-900 text-white font-semibold py-2 rounded mt-4">
             Login
           </button>
           <p className='text[13px] text-slate-700 mt-3'>
-            Don't have an account?{" "}
-            <Link className = "font-medium text-violet-500 underline" to="/signup">Sign Up</Link>
+           Don't have an account?{" "}
+            <Link className = "font-medium text-violet-500 underline" to="/signup">SignUp</Link>
           </p>
         </form>
      
