@@ -55,10 +55,13 @@ app.use(cors({
 
 app.use(express.json()); // 👈 Parsing JSON body
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/income", incomeRoutes);
 
 
 
-// serve uplo
+// serve uploads folder
+
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Start server
 const PORT = process.env.PORT || 5000;
