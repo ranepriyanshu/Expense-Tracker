@@ -56,6 +56,10 @@ app.use(cors({
 app.use(express.json()); // 👈 Parsing JSON body
 app.use("/api/v1/auth", authRoutes);
 
+
+
+// serve uplo
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
