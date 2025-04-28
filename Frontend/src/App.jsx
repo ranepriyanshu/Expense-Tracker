@@ -10,9 +10,9 @@ import {
 
 import Login from './pages/Auth/Login'  
 import SignUp from './pages/Auth/SignUp'
-import Income from './pages/Auth/Dashboard/Income';
-import Expense from './pages/Auth/Dashboard/Expense';
-import Home from './pages/Auth/Dashboard/Home';  
+import Income from './pages/Dashboard/Income';
+import Expense from './pages/Dashboard/Expense';
+import Home from './pages/Dashboard/Home';  
 
 
 
