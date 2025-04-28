@@ -97,19 +97,21 @@
 // export default Login;
 
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthLayout from '../../components/layouts/AuthLayout';
 import Input from '../../components/inputs/input.jsx';
 import { validateEmail } from './../../utils/helper.js';
 import axiosInstance from "./../../utils/axiosInstance.js"
 import { API_PATHS } from './../../utils/apiPath'; // Added this line
+import {UserContext} from "../../context/userContext.jsx";
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const {updateUser} = useContext(UserContext);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -137,6 +139,7 @@ const Login = () => {
 
       if (token) {
         localStorage.setItem("token", token);
+        updateUser(user);
         navigate("/dashboard"); // useNavigate hook
       }
     } catch (error) {
